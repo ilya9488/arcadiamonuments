@@ -1,0 +1,66 @@
+.fancybox__slide.has-caption.has-image.is-selected
+  padding: 100px 0
+
+a[data-fancybox] img
+  cursor: zoom-in
+
+.fancybox__container
+  --fancybox-bg: rgba(57, 55, 60, 0.95)
+  .fancybox__counter
+    position: absolute
+    text-align: center
+    font-size: 18px
+    padding-top: 50px
+    width: 100%
+    bottom: 50px
+  .fancybox__content
+    padding: 0
+    border-radius: 0
+    img.fancybox__image
+      object-fit: cover
+      object-position: top
+    .carousel__button.is-close
+      right: -50px
+      top: -50px
+      width: 30px
+      height: 30px
+      border: 1px solid $clear
+      svg
+        width: 15px
+        stroke-width: 1.7
+button.carousel__button.is-next,
+button.carousel__button.is-prev
+  background: url('../img/icons/next-arrow.svg')
+  background-color: transparent
+  border-radius: 10px
+  border: 2px solid $clear
+  background-repeat: no-repeat
+  background-size: 60%
+  background-position: center center
+  top: 50%
+  @include media-breakpoint-down(sm)
+    display: none
+  svg
+    display: none
+button.carousel__button.is-prev
+  background: url('../img/icons/prev-arrow.svg')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 60%
+  @include media-breakpoint-down(sm)
+    border: 1px solid $clear
+    background-size: 40%
+    width: 30px
+
+
+div.fancybox__caption
+  padding: 37px 20px
+  width: 100%
+  font-size: 22px
+  font-family: $title
+  background: $caption-bg
+  @include media-breakpoint-down(sm)
+    font-size: 16px
+    padding: 27px 10px
+.fancybox__container .fancybox__content
+  color: $dark-gray

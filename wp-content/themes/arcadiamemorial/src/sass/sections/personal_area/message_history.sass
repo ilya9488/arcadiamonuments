@@ -1,0 +1,43 @@
+.message-history
+  .title
+    padding-top: 30px
+    margin-bottom: 25px
+    @include media-breakpoint-down(md)
+      padding-top: 0
+
+  .pagination-content
+    .block
+      margin-bottom: 30px
+      @include media-breakpoint-down(sm)
+        margin-bottom: 20px
+      .text-wrap
+        max-width: 1110px
+        padding: 10px 20px 40px 40px
+        background: $clear-bg
+        @include media-breakpoint-down(sm)
+          padding: 10px 15px 30px 15px
+        .title
+          display: inline-block
+          margin-right: 20px
+          margin-bottom: 20px
+          @include media-breakpoint-down(md)
+            padding-top: 15px
+            margin-right: 15px
+        .date
+          color: transparentize($gray, .2)
+          @include media-breakpoint-down(sm)
+            font-size: 12px
+        .text
+        .link-goto
+          color: $gold
+          text-decoration: none
+          &:active
+            text-decoration: underline
+      .text-wrap.new-comment
+        background: transparentize($input-bg, .9)
+        border: 1px solid $input-bg
+        transition: 1s
+        &:hover
+          border-color: transparent
+          background: transparentize($input-bg, .93)
+          

@@ -1,0 +1,112 @@
+.tab-content
+  display: flex
+  flex-wrap: wrap
+  .btn-wrap
+    padding-bottom: 30px
+    width: 100%
+    .all,
+    .foto,
+    .video
+      border: none
+      border-bottom: 1px solid $lite-gray
+      width: 100px
+      text-align: center
+      background: transparent
+      transition: .3s
+      &:hover
+        border-width: 3px
+        border-color: $active
+        margin-bottom: -1px
+    .active
+      border-width: 3px
+      border-color: $active
+      margin-bottom: -1px
+  a[data-fancybox="video"]
+    position: relative
+    .icon-play-video
+      position: absolute
+      right: 50%
+      top: 50%
+      transform: translate(50%, -50%)
+      transition: .4s
+      &:hover
+        transform: translate(50%, -50%) scale(1.1)
+      @include media-breakpoint-down(lg)
+        width: 55px
+        height: 55px
+      @include media-breakpoint-down(md)
+        width: 45px
+        height: 45px
+  a[data-fancybox="video"],
+  a[data-fancybox="foto"]
+    display: inline-block
+    width: 255px
+    height: 255px
+    overflow: hidden
+    padding: 0
+    margin: 0
+    margin-left: 15px
+    margin-right: 15px
+    margin-bottom: 30px
+    @include media-breakpoint-down(lg)
+      width: 200px
+      height: 200px
+      margin-left: 10px
+      margin-right: 10px
+      margin-bottom: 20px
+    @include media-breakpoint-down(md)
+      width: 160px
+      height: 160px
+      margin-left: 10px
+      margin-right: 0
+      margin-bottom: 10px
+    @include media-breakpoint-down(sm)
+      width: 30%
+      height: 120px
+      margin-left: 10px
+      margin-right: 0
+      margin-bottom: 10px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center top
+
+
+// example css (delete on finish)
+.big-gallery
+  padding-bottom: 175px
+  .tab-content
+    padding: 7px 0
+    .tab-pane
+      img
+        margin-left: 30px
+        margin-bottom: 30px
+        @include media-breakpoint-down(lg)
+          max-width: 200px
+          margin-left: 20px
+          margin-bottom: 20px
+        @include media-breakpoint-down(md)
+          max-width: 150px
+          margin-left: 15px
+          margin-bottom: 15px
+        @include media-breakpoint-down(sm)
+          max-width: 100px
+          margin-left: 10px
+          margin-bottom: 10px
+  .nav
+    padding-bottom: 5px
+    .nav-item
+      .nav-link
+        text-align: center
+        background: $clear
+        color: $gray
+        padding: 0 0 5px
+        min-width: 100px
+        border-bottom: 1px solid $lite-gray
+        border-radius: 0
+        &:hover,&:focus,&:active
+          text-decoration: none
+          border-bottom: 3px solid $active
+      .active
+        border-bottom: 3px solid $active

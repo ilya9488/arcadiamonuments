@@ -1,0 +1,67 @@
+.favorites
+  .title
+    padding-top: 25px
+    @include media-breakpoint-down(md)
+      padding-top: 0
+  .pagination-content
+
+    .block
+      cursor: pointer
+      padding-top: 30px
+      padding-bottom: 30px
+      padding-right: 20px
+      padding-left: 0
+      margin-left: 15px
+      border-bottom: 1px solid $lite-gray
+      text-decoration: none
+      &:last-child
+        border-bottom: 1px solid transparent
+      .img-wrap
+        width: 160px
+        height: 200px
+        @include media-breakpoint-down(sm)
+          width: 120px
+          height: 160px
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          object-position: center top
+      .text
+        position: relative
+        &:hover
+          background: $clear-bg
+          .star
+            fill: $dark-gray
+        .text-wrap
+          max-width: 600px
+          padding: 15px 0 0 15px
+          @include media-breakpoint-down(sm)
+            padding: 10px 0 10px 0
+          h4
+            @include media-breakpoint-down(sm)
+              margin-bottom: 0
+          .date
+            padding-bottom: 15px
+            color: $dark-gray
+            @include media-breakpoint-down(sm)
+              font-size: 12px
+              padding-bottom: 10px
+          .city
+            padding-bottom: 15px
+            color: $dark-gray
+            @include media-breakpoint-down(sm)
+              font-size: 12px
+              padding-bottom: 10px
+          .info
+            padding-bottom: 0
+            @include media-breakpoint-down(sm)
+              font-size: 13px
+        .star
+          position: absolute
+          right: 15px
+          top: 15px
+          fill: transparent
+          width: 20px
+          height: 20px
+          transition: .3s

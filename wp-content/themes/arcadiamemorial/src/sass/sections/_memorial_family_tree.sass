@@ -1,0 +1,64 @@
+.family-tree
+  background-repeat: no-repeat
+  background-size: 1160px
+  background-position: center center
+  padding-bottom: 80px
+  @include media-breakpoint-down(sm)
+    background-size: 900px 90%
+    background-position: center 50px
+  h2
+    margin-top: 0
+    margin-bottom: 30px
+    @include media-breakpoint-down(sm)
+      margin-bottom: 30px
+  .family-member
+    text-align: center
+    width: 50%
+    margin-bottom: 30px
+
+    .img-wrap
+      width: 140px
+      height: 140px
+      border-radius: 50%
+      border: 4px solid $active
+      margin: 0 auto 20px
+      z-index: 1
+      @include media-breakpoint-down(md)
+        width: 130px
+        height: 130px
+      @include media-breakpoint-down(sm)
+        width: 110px
+        height: 110px
+
+      img
+        width: 100%
+        height: 100%
+        border-radius: 50%
+    .name
+      color: $text
+      font-family: $title
+      font-size: 22px
+      font-weight: 400
+      margin-bottom: 10px
+      @include media-breakpoint-down(md)
+        font-size: 20px
+      @include media-breakpoint-down(sm)
+        font-size: 18px
+
+    .rank
+      // background: $orange-txt
+      width: 138px
+      padding: 7px 0
+      margin: 0 auto
+      border-radius: 100px
+      // color: $clear
+      font-size: 16px
+      font-weight: 400
+      // font-family: $text
+      z-index: 1
+      @include media-breakpoint-down(md)
+        font-size: 14px
+      @include media-breakpoint-down(sm)
+        font-size: 13px
+        width: 130px
+        

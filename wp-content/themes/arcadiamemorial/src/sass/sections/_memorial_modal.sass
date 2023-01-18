@@ -1,0 +1,200 @@
+.modal.gifts,
+.modal.all-gifts
+  .modal-dialog
+    max-width: 700px
+  .modal-content
+    max-width: 700px
+    .modal-header
+      border: none
+      padding: 0
+      margin: 0
+      .close
+        @include media-breakpoint-down(lg)
+
+        @include media-breakpoint-down(md)
+          top: 20px
+          right: 20px
+          // border: none
+          font-size: 25px
+          padding: 10px 5px 12px
+          border-color: $dark-gray
+          color: $dark-gray
+          opacity: .7
+    .modal-body
+      padding: 50px 50px 60px
+      @include media-breakpoint-down(sm)
+        padding: 0
+// gifts
+.modal.gifts
+  .modal-dialog
+    .modal-content
+      max-width: 630px
+      padding-bottom: 70px
+      @include media-breakpoint-down(lg)
+        max-width: 550px
+        padding-bottom: 40px
+      @include media-breakpoint-down(md)
+        max-width: 450px
+        padding-bottom: 20px
+      @include media-breakpoint-down(sm)
+        max-width: 300px
+      .modal-header
+        background: $active
+        border-radius: 0
+        .modal-title
+          margin: 20px 0
+          @include media-breakpoint-down(sm)
+            margin: 15px 0 10px
+      .modal-body
+        margin: 0
+        padding: 50px 75px 0
+        @include media-breakpoint-down(lg)
+          padding: 20px 30px 0
+        @include media-breakpoint-down(md)
+          padding: 30px 30px 0
+        @include media-breakpoint-down(sm)
+          padding: 20px 20px 0
+
+        .gift
+          width: 100%
+          max-width: 250px
+          margin-bottom: 70px
+          @include media-breakpoint-down(lg)
+            max-width: 230px
+            margin-bottom: 30px
+          @include media-breakpoint-down(md)
+            max-width: 200px
+            margin-bottom: 20px
+          @include media-breakpoint-down(sm)
+            max-width: 100px
+            margin-bottom: 20px
+        .modal-price
+          font-size: 30px
+          font-weight: 500
+          font-family: $text
+          text-align: center
+          display: block
+        .btn-create
+          margin-top: 20px
+          padding-left: 40px
+          padding-right: 40px
+// all-gifts
+.modal.all-gifts
+  .modal-dialog
+    .modal-content
+      max-width: 620px
+      padding-bottom: 70px
+      @include media-breakpoint-down(sm)
+        max-width: 350px
+        padding-bottom: 20px
+      .modal-header
+        padding: 0 75px
+        @include media-breakpoint-down(sm)
+          padding: 0 15px
+        .modal-title
+          margin-bottom: 30px
+          @include media-breakpoint-down(sm)
+            margin-bottom: 0
+            padding-top: 40px
+      .modal-body
+        margin: 0
+        padding: 0
+        .img-wrapper
+          padding: 0
+          margin: 0 auto
+          @include media-breakpoint-down(sm)
+            padding: 10px 0 0 0
+          .icon-price
+            padding: 0
+            .gift
+              max-width: 100px
+              margin: 20px
+              @include media-breakpoint-down(sm)
+                max-width: 40px
+                margin: 15px
+// for events
+.eventModal
+  .modal-dialog
+    max-height: 600px
+    max-width: 920px
+    .modal-content
+      background: transparent
+      border: none
+      max-height: 600px
+      max-width: 920px
+      .modal-header
+        position: relative
+        border: none
+        padding: 0
+        margin: 0
+        .close
+          position: absolute
+          top: -40px
+          right: -40px
+          color: $clear
+          text-shadow: none
+          font-family: $text
+          font-weight: 100
+          font-size: 40px
+          line-height: 22px
+          padding: 4px
+          border: 1px solid $clear
+          border-radius: 50%
+          opacity: .9
+          @include media-breakpoint-down(md)
+            top: -30px
+            right: 15px
+      .modal-body
+        padding: 0
+        max-width: 920px
+        max-height: 600px
+        overflow: hidden
+        position: relative
+        @include media-breakpoint-down(sm)
+          max-width: 920px
+          max-height: 600px
+          margin: 0
+        img
+          margin: 0
+          width: 100%
+          max-width: 920px
+          object-fit: cover
+          object-position: center top
+        .modal-footer
+          border: none
+          margin: 0
+          position: absolute
+          bottom: 0
+          width: 100%
+          background: transparentize($yellow, .1)
+          color: $text
+          padding: 15px
+          @include media-breakpoint-down(sm)
+            padding: 0 15px
+            bottom: -69px
+          h4
+            @include media-breakpoint-down(sm)
+              padding-bottom: 0
+          span
+            font-size: 16px
+            font-weight: 400
+            font-family: $text
+            @include media-breakpoint-down(sm)
+              font-size: 14px
+              margin: 0 0 10px
+.modal-events__list
+  display: flex
+  font-size: 0
+  row-gap: 15px
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  max-width: 400px
+  margin: 0 auto
+  background-color: $clear
+  padding: 30px 20px
+  color: black
+  font-family: "Playfair Display",serif
+  cursor: pointer
+  span
+    font-size: 24px

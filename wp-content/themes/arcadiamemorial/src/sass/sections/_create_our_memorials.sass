@@ -1,0 +1,292 @@
+.create-our-memorials
+  // temporary style
+  display: none
+  margin-bottom: 128px
+  @include media-breakpoint-down(sm)
+    margin-bottom: 50px
+  .title-wrapper
+    text-align: center
+    margin-bottom: 40px
+
+  .free,
+  .basic,
+  .premium
+    padding: 15px 5px
+    @include media-breakpoint-down(md)
+      padding: 15px 0
+    @include media-breakpoint-down(sm)
+      padding: 5px 0
+
+  .customised
+    p
+      text-align: center
+      max-width: 150px
+
+
+  .offset-block,
+  .offset-block-headedr
+    min-width: 390px
+    padding: 19px 0 20px 2px
+    @include media-breakpoint-down(lg)
+      min-width: 300px
+    @include media-breakpoint-down(md)
+      min-width: 200px
+    @include media-breakpoint-down(sm)
+      min-width: 115px
+      padding: 19px 0 20px 0
+    h4
+      margin-bottom: 17px
+      @include media-breakpoint-down(sm)
+        margin-bottom: 0
+    p
+      padding: 0
+      max-width: 340px
+      @include media-breakpoint-down(sm)
+        font-size: 13px
+  .offset-block-headedr
+    @include media-breakpoint-up(sm)
+      padding: 19px 0 20px 126px
+  .border_b
+    border-bottom: 1px solid $lite-gray 
+
+
+  .t_center
+    display: flex
+    justify-content: center
+    align-items: center
+  .t_left
+    display: flex
+    justify-content: flex-start
+    align-items: center
+  .m_4
+    margin-left: 4px
+    margin-bottom: 4px
+    @include media-breakpoint-down(md)
+      margin-left: 4px
+      margin-bottom: 4px
+    @include media-breakpoint-down(sm)
+      margin-left: 2px
+      margin-bottom: 2px
+
+  .cell-lite-gray
+    background: $clear-gray-bg
+  .cell-yellow
+    background: $active
+  .cell-dark-gray
+    background: $dark-gray
+    h3
+      color: $clear
+
+  .cell-lite-gray,
+  .cell-yellow,
+  .cell-dark-gray
+    min-width: 69px
+    h3
+      margin-bottom: 0
+      padding-bottom: 0
+      @include media-breakpoint-down(sm)
+        font-size: 15px
+        padding: 0 3px 0 3px
+
+  .cell-white-gray
+    background: $clear-bg
+  .cell-lite-yellow
+    background: $lite-active
+  .cell-gray
+    background: $cell-gray
+    p
+      color: $clear
+  .cell-white-gray,
+  .cell-lite-yellow,
+  .cell-gray
+    min-width: 69px
+    p
+      margin-bottom: 0
+      padding-bottom: 0
+      padding-top: 4px
+      @include media-breakpoint-down(md)
+        font-size: 16px
+        padding: 0 4px
+      @include media-breakpoint-down(sm)
+        font-size: 11px
+        padding: 0 4px
+  .price
+    .price-wrapper
+      font-size: 42px
+      color: $dark-gray
+      font-weight: 900
+      @include media-breakpoint-down(sm)
+        font-size: 20px
+        padding-top: 10px
+      .zero
+        display: inline-block
+        color: $dark-gray
+        font-size: 20px
+        vertical-align: top
+        @include media-breakpoint-down(sm)
+          font-size: 13px
+      .per
+        color: $gray
+        font-size: 14px
+        margin-left: -30px
+        font-weight: 100
+        @include media-breakpoint-down(md)
+          font-size: 11px
+          display: block
+          text-align: right
+
+  .view
+    padding: 30px 0 0 0
+    @include media-breakpoint-down(sm)
+      padding: 10px 0 0 0
+    a
+      font-size: 16px
+      text-transform: uppercase
+      text-decoration: none
+      color: $dark-gray
+      @include media-breakpoint-down(sm)
+        font-size: 11px
+    .arrow
+      margin: 0 0 5px 5px
+
+  .free-btn,
+  .basic-btn,
+  .premium-btn
+    margin-top: 25px
+    padding: 0
+    @include media-breakpoint-down(sm)
+      margin-top: 15px
+    a
+      color: $dark-gray
+      text-transform: uppercase
+      font-size: 16px
+      padding: 16px 0
+      width: 100%
+      text-decoration: none
+      @include media-breakpoint-down(sm)
+        font-size: 11px
+        padding: 10px 0
+  .premium-btn
+    a
+      color: $clear
+
+.create-a-memorial
+  .free,
+  .premium,
+  .basic
+    border: 1px solid $lite-gray
+    .content-bg
+      position: relative
+      padding-bottom: 30px
+      text-align: center
+      &::before
+        background: $free-bg
+        content: ''
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        clip-path: polygon(0 220px, 100% 380px, 100% 100%, 0 100%)
+      .view-example
+        position: relative
+
+  .premium
+    .content-bg
+      position: relative
+      &::before
+        background: $premium-bg
+  .basic
+    .content-bg
+      position: relative
+      &::before
+        background: $basic-bg
+        
+  .content
+    position: relative
+    background: $clear
+    margin: 0 30px 30px
+    text-align: left
+    ul
+      padding-top: 35px
+      padding-left: 60px
+      padding-right: 25px
+      li
+        font-size: 16px
+        font-weight: 400
+        line-height: 26px
+        padding-bottom: 16px
+        position: relative
+        &::before
+          content: ''
+          background-image: url('../img/create-memorial/icons/dark-circle-check.svg')
+          background-repeat: no-repeat
+          background-size: contain
+          top: 0
+          left: -30px
+          width: 20px
+          height: 20px
+          position: absolute
+        
+  .head-text
+    padding: 30px
+    text-align: center
+  .title-wrapper
+    padding: 30px 0 30px 0
+    h3
+      margin: 0
+      text-align: center
+
+  .free
+    margin-top: 160px
+    @include media-breakpoint-down(md)
+     margin-top: 30px
+    .title-wrapper
+      background-color: $free-bg
+  .premium
+    margin-top: 30px
+    .title-wrapper
+      background-color: $premium-bg
+  .basic
+    margin-top: 100px
+    @include media-breakpoint-down(md)
+     margin-top: 30px
+    .title-wrapper
+      background-color: $basic-bg
+  .btn-create
+    margin: 0 auto 30px
+  .view-example
+    position: relative
+    text-align: center
+    font-size: 16px
+    font-weight: 500
+    color: $dark-gray
+    text-transform: uppercase
+    text-decoration: none
+    margin-left: -20px
+    &:hover
+        &::after
+          right: -38px
+    &::after
+      content: ''
+      background-image: url('../img/about-us/icons/arrow-right.svg')
+      background-repeat: no-repeat
+      background-size: contain
+      top: 5px
+      right: -30px
+      width: 20px
+      height: 20px
+      position: absolute
+      transition: .3s
+  
+  div.modal#createModal
+    .modal-dialog
+      @include media-breakpoint-down(sm)
+        margin: 0 auto
+    .modal-content
+      .modal-body
+        @include media-breakpoint-down(sm)
+          margin: 0
+          padding: 12px
+    .close
+      z-index: 1

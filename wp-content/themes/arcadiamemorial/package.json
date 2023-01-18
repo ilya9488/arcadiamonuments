@@ -1,0 +1,43 @@
+{
+  "name": "dynamo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.6.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify-es": "^2.0.0"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "@fancyapps/ui": "github:fancyapps/ui",
+    "@pqina/flip": "github:pqina/flip",
+    "bootstrap-datepicker": "^1.9.0",
+    "bootstrap-datetimepicker-sass": "^3.0.3",
+    "bootstrap-sass-datepicker": "^1.0.0",
+    "bootstrap4-datetimepicker": "^5.2.3",
+    "intl-tel-input": "^17.0.12",
+    "jquery-mask-plugin": "^1.14.16",
+    "jquery-ui": "^1.12.1",
+    "jquery-validation": "^1.19.3",
+    "moment": "^2.29.1",
+    "pickmeup": "^3.2.1",
+    "rigger": "^1.0.1",
+    "slick-carousel": "^1.8.1"
+  }
+}

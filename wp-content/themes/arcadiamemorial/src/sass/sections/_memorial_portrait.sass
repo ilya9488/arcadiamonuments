@@ -1,0 +1,74 @@
+.memorial-portrait
+  margin-top: -338px
+  margin-bottom: 60px
+  @include media-breakpoint-down(md)
+    margin-top: -150px
+    margin-bottom: 60px
+  @include media-breakpoint-down(sm)
+    margin-bottom: 30px
+  .portrait
+    max-width: 350px
+    border: 6px solid $active
+    @include media-breakpoint-down(md)
+      max-width: 250px
+      margin: 0 auto
+    img
+      width: 100%
+      height: auto
+  .name-data
+    padding-left: 45px
+    padding-bottom: 15px
+    @include media-breakpoint-down(md)
+      padding-bottom: 0
+      padding-left: 20px
+    @include media-breakpoint-down(sm)
+      padding-top: 20px
+      padding-left: 20px
+      margin: 0 auto
+      text-align: center
+    h2
+      margin-top: 0
+      margin-bottom: 15px
+      @include media-breakpoint-down(md)
+        margin-bottom: 0
+    h3
+      font-family: $text
+      margin-bottom: 30px
+      @include media-breakpoint-down(md)
+        margin-bottom: 20px
+        font-size: 20px
+      @include media-breakpoint-down(sm)
+        margin-bottom: 0
+        font-size: 18px
+  .add
+    border: none
+    background: $active
+    border-radius: 50px
+    text-transform: uppercase
+    padding: 12px 28px 10px
+    font-size: 16px
+    font-weight: 500
+    line-height: 24px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: .3s
+    &:hover
+      background: darken($active, 8)
+      svg
+        transform: scale(1.2)
+    svg
+      width: 17px
+      height: 17px
+      fill: transparent
+      stroke: $dark-gray
+      margin-left: 13px
+      margin-top: -2px
+      transition: .5s
+    svg.favorite
+      fill: $dark-gray
+      transition: .5s
+
+
+
+

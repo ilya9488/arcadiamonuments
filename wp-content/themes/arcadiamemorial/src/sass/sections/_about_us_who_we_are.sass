@@ -1,0 +1,22 @@
+.about-us-who-we-are
+  @include media-breakpoint-down(md)
+    padding-bottom: 20px
+  h2
+    margin-top: 0
+    min-width: 300px
+  .img-wrapper
+    min-width: 300px
+    max-width: 500px
+    margin-bottom: 40px
+    @include media-breakpoint-down(md)
+      margin-top: 0
+    @include media-breakpoint-down(sm)
+      overflow: hidden
+      max-height: 500px
+      margin-bottom: 20px
+      margin-top: 15px
+      padding-right: 0
+    img
+      width: 100%
+      object-fit: cover
+      object-position: center

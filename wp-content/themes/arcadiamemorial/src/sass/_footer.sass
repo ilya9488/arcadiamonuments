@@ -1,0 +1,90 @@
+.footer
+  background-color: $dark-gray
+  padding-top: 100px
+  margin-bottom: 0
+  &-logo-title,h4
+      color: $clear
+  h4
+    padding-top: 30px
+    padding-bottom: 5px
+  p,li,a,span
+    color: $footer-txt
+    line-height: 26px
+    list-style: none
+  p
+    padding-bottom: 0
+  &-logo-title
+    .white-logo
+      width: 160px
+      height: 30px
+      margin-bottom: 25px
+
+  .create-a-digital
+    max-width: 350px
+    min-width: 200px
+    padding: 30px 50px 0 0
+    @include media-breakpoint-down(md)
+      padding-left: 0
+      padding: 20px 50px 0 0
+    @include media-breakpoint-down(sm)
+      padding-bottom: 40px
+    .links
+      margin-top: 40px
+      img
+        padding-right: 8px
+  .useful
+    min-width: 170px
+    max-width: 350px
+    padding-left: 30px
+    h4
+      @include media-breakpoint-down(sm)
+        padding-top: 0
+    ul
+      padding: 10px 0 0 0
+      li
+        margin-bottom: 10px
+        letter-spacing: 1px
+  .our-friends
+    min-width: 160px
+    max-width: 350px
+    padding-left: 45px
+    ul
+      padding: 9px 0 0 3px
+      li
+        margin-bottom: 17px
+        font-size: 16px
+  .our-awards
+    min-width: 160px
+    max-width: 350px
+    ul
+      padding: 6px 0 0 0
+      li
+        margin-bottom: 25px
+  &-bottom-text
+    margin-top: 33px
+    padding: 30px 0 30px 0
+    border-top: 1px solid $clear-ops
+    @include media-breakpoint-down(md)
+      flex-direction: column
+      text-align: center
+      padding: 20px 0 20px 0
+      margin: 15px -5px 0
+    span
+      line-height: 20px
+      @include media-breakpoint-down(md)
+        padding: 0 0 5px 0
+      @include media-breakpoint-down(sm)
+        font-size: 12px
+      
+  .create-a-digital,
+  .useful,
+  .our-friends,
+  .our-awards
+    @include media-breakpoint-down(md)
+      margin: 0 auto
+      padding-left: 40px
+    @include media-breakpoint-down(sm)
+      padding-left: 0
+  .create-a-digital
+    @include media-breakpoint-down(md)
+      padding-left: 0

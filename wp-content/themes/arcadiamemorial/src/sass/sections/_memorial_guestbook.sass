@@ -1,0 +1,181 @@
+.guestbook
+  position: relative
+  padding-top: 40px
+  padding-bottom: 30px
+  .add-text
+    background-color: $clear-bg
+    padding: 50px
+    @include media-breakpoint-down(sm)
+      padding: 30px 15px
+    h3
+      font-size: 30px
+      margin-bottom: 25px
+      @include media-breakpoint-down(sm)
+        font-size: 25px
+    .text-field
+      width: 100%
+      height: 200px
+      padding: 15px 10px
+      margin-bottom: 25px
+      border: none
+      &:focus
+        outline: none
+      &::placeholder
+        color: transparentize($dark-gray, .3)
+        font-size: 16px
+        font-weight: 400
+    .add-txt
+      color: $gray
+      font-size: 16px
+      font-weight: 400
+    .add-btn
+      cursor: pointer
+      border: none
+      outline: none
+      margin-left: 5px
+      background: transparent
+        
+  .toast-reply
+    margin: 20px 0 0 130px
+    max-width: 100%
+    @include media-breakpoint-down(md)
+      margin: 20px 0 0 85px
+    @include media-breakpoint-down(sm)
+      margin: 20px 0
+
+    .add-text
+      padding: 30px 15px
+      .btn-wrap
+        .dark-btn.publish
+          padding: 14px 20px
+          font-size: 15px
+        .add-txt
+          font-size: 14px
+    .close
+      display: inline-block
+      overflow: hidden
+      font-family: $text
+      font-size: 70px
+      font-weight: 100
+      line-height: 0
+      padding-top: 5px
+      width: 30px
+      height: 30px
+      // color: $medium-gray
+      &:hover
+        // color: $dark
+      &:focus
+        // color: $orange-txt
+        
+
+  .comments
+    margin-top: 30px
+    background-color: $clear-bg
+    padding-bottom: 50px
+    .guest
+      padding-top: 50px
+      padding-left: 50px
+      @include media-breakpoint-down(md)
+        padding-top: 20px
+        padding-left: 20px
+      .thumbnail
+        display: inline-block
+        overflow: hidden
+        font-size: 30px
+        line-height: 27px
+        width: 60px
+        height: 60px
+        padding: 14px 0 
+        margin-right: 20px
+        border-radius: 50%
+        background: $clear
+        color: $thumb-txt
+        border: 2px solid $active
+        text-align: center
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: top center
+        @include media-breakpoint-down(md)
+          font-size: 25px
+          line-height: 27px
+          width: 50px
+          height: 50px
+          padding: 10px 0
+          margin-right: 15px
+      .name
+        color: $dark-gray
+        font-family: $title
+        font-size: 18px
+        line-height: 50px
+        font-weight: 400
+    &-text
+      display: inline-block
+      max-width: 550px
+      margin-left: 130px
+      padding-bottom: 15px
+      padding-right: 15px
+      @include media-breakpoint-down(md)
+        margin-left: 85px
+      @include media-breakpoint-down(sm)
+        padding-right: 0
+        margin: 20px 20px 0
+    .img-wrap
+      margin-left: 130px
+      @include media-breakpoint-down(md)
+        margin-left: 85px
+      @include media-breakpoint-down(sm)
+        margin: 20px 20px 0
+      a
+        height: 100px
+        width: 100px
+        margin-bottom: 10px
+        margin-right: 10px
+        @include media-breakpoint-down(md)
+          width: 25%
+          height: 110px
+          margin-right: 0
+          margin-bottom: 0
+        @include media-breakpoint-down(sm)
+          height: 100px
+          width: 33.333%
+          margin-right: 0
+          margin-bottom: 0
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          object-position: center top
+          @include media-breakpoint-down(md)
+            padding-right: 10px
+            padding-bottom: 10px
+          @include media-breakpoint-down(sm)
+            padding-right: 10px
+            padding-bottom: 10px
+
+    .data,
+    .reply
+      display: inline-block
+      margin-left: 130px
+      font-size: 14px
+      font-weight: 400
+      font-family: $text
+      color: transparentize($gray, .2)
+      @include media-breakpoint-down(md)
+        margin: 0 0 0 85px
+      @include media-breakpoint-down(sm)
+        margin: 0 0 0 20px
+    .reply
+      border: none
+      background: transparent
+      color: $gold
+      margin: 0
+    >.comments
+      padding-bottom: 0
+      @include media-breakpoint-down(sm)
+        padding-left: 50px
+      .guest
+        padding: 0 0 15px 130px
+        @include media-breakpoint-down(md)
+          padding: 0 0 15px 85px
+        @include media-breakpoint-down(sm)
+          padding: 0 0 0px 15px

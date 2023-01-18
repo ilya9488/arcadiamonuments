@@ -1,0 +1,141 @@
+.tabs
+  margin-bottom: 40px
+  nav
+    background: $active
+  .profile
+    background: url('../img/icons/tabs/profile.svg')
+    &:hover,&:focus
+      background: url('../img/icons/tabs/profile-active.svg')
+  .active.profile
+    background-image: url('../img/icons/tabs/profile-active.svg')
+    background-color: $klick-btn
+    span
+      color: $dark-gray
+  .active.gallery
+    background-image: url('../img/icons/tabs/gallery-active.svg')
+    background-color: $klick-btn
+    span
+      color: $dark-gray
+  .active.family
+    background-image: url('../img/icons/tabs/family-active.svg')
+    background-color: $klick-btn
+    span
+      color: $dark-gray
+  .active.event
+    background-image: url('../img/icons/tabs/event-active.svg')
+    background-color: $klick-btn
+    span
+      color: $dark-gray
+  .active.share
+    background-image: url('../img/icons/tabs/share-active.svg')
+    background-color: $klick-btn
+    span
+      color: $dark-gray
+  .gallery
+    background: url('../img/icons/tabs/gallery.svg')
+    &:hover,&:focus
+      background: url('../img/icons/tabs/gallery-active.svg')
+  .family
+    background: url('../img/icons/tabs/family.svg')
+    &:hover,&:focus
+      background: url('../img/icons/tabs/family-active.svg')
+  .event
+    background: url('../img/icons/tabs/event.svg')
+    &:hover,&:focus
+      background: url('../img/icons/tabs/event-active.svg')
+  .share
+    background: url('../img/icons/tabs/share.svg')
+    &:hover,&:focus
+      background: url('../img/icons/tabs/share-active.svg')
+  .profile,
+  .gallery,
+  .family,
+  .event,
+  .share
+    color: $tab-text
+    background-repeat: no-repeat
+    background-position: center 16px
+    background-size: 30px
+    transition: 0.2s
+    padding: 60px 0 16px
+    text-align: center
+    @include media-breakpoint-down(md)
+      background-size: 20%
+    @include media-breakpoint-down(sm)
+      background-size: 30px
+      padding: 60px 0 10px
+
+    &:hover,&:focus
+      background-position: center 16px
+      background-size: 30px
+      background-color: $klick-btn
+      background-repeat: no-repeat
+      @include media-breakpoint-down(md)
+        background-size: 20%
+      @include media-breakpoint-down(sm)
+        background-size: 30px
+      
+      span
+        color: $dark-gray
+        
+    span
+      font-weight: 500
+      font-size: 16px
+      text-transform: uppercase
+      @include media-breakpoint-down(sm)
+        font-size: 9px
+
+  .gallery
+    background-size: 35px
+    @include media-breakpoint-down(sm)
+      background-size: 34px
+    &:hover,&:focus
+      background-size: 35px
+      @include media-breakpoint-down(sm)
+        background-size: 34px
+        span
+          padding: 0 5px
+    
+  .family
+    background-size: 36px
+    @include media-breakpoint-down(md)
+      background-size: 22%
+    @include media-breakpoint-down(sm)
+      background-size: 40px
+    &:hover,&:focus
+      background-size: 36px
+      @include media-breakpoint-down(md)
+        background-size: 22%
+      @include media-breakpoint-down(sm)
+        background-size: 40px
+  .event
+    background-size: 37px
+    @include media-breakpoint-down(md)
+      background-size: 21%
+    @include media-breakpoint-down(sm)
+      background-size: 36px
+
+    &:hover,&:focus      
+      background-size: 37px
+      @include media-breakpoint-down(md)
+        background-size: 21%
+      @include media-breakpoint-down(sm)
+        background-size: 36px
+      
+  .share
+    background-size: 40px
+    @include media-breakpoint-down(md)
+      background-size: 23%
+    @include media-breakpoint-down(sm)
+      background-size: 36px
+      
+    &:hover,&:focus
+      cursor: pointer
+      background-size: 40px
+      @include media-breakpoint-down(md)
+        background-size: 22.4%
+      @include media-breakpoint-down(sm)
+        background-size: 35px
+        
+  .active
+    background-color: $klick-btn

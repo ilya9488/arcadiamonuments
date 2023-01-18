@@ -1,0 +1,86 @@
+.biography-main-events
+  .biography-wrapper
+    padding-bottom: 37px
+    @include media-breakpoint-down(sm)
+      padding-bottom: 15px
+
+    h2
+      margin-top: 0
+      @include media-breakpoint-down(sm)
+        margin-bottom: 20px
+
+  .about,
+  .memorial,
+  .family,
+  .achievements
+    padding-top: 60px
+    @include media-breakpoint-down(sm)
+      padding-top: 30px
+
+    h2
+      margin-top: 0
+      @include media-breakpoint-down(sm)
+        margin-bottom: 20px
+
+    .list-l,
+    .list-r
+      p
+        padding-left: 15px
+        padding-bottom: 17px
+        font-weight: 400
+        color: $gray
+        @include media-breakpoint-down(sm)
+          padding-left: 15px
+          font-size: 12px
+
+    .list-r
+      padding-left: 65px
+      @include media-breakpoint-down(sm)
+        padding-left: 0
+      p
+        font-weight: 500
+        color: $dark-gray
+        @include media-breakpoint-down(md)
+          font-size: 16px
+        @include media-breakpoint-down(sm)
+          font-size: 11px
+          padding-left: 5px
+
+  .about
+    padding-top: 0
+    .list-r
+      padding-left: 0
+      margin-left: -120px
+      @include media-breakpoint-down(sm)
+        padding-left: 0
+        margin-left: 0
+
+  .memorial
+    padding-top: 43px
+    @include media-breakpoint-down(sm)
+      padding-top: 0
+    .list-r
+      padding-left: 80px
+      @include media-breakpoint-down(sm)
+        padding-left: 0
+
+  .achievements
+    padding-top: 43px
+    @include media-breakpoint-down(sm)
+      padding-top: 0
+    .list-r
+      padding-left: 65px
+      @include media-breakpoint-down(sm)
+        padding-left: 10px
+
+  .map
+    margin-top: 10px
+    padding: 130px 0
+    background: $bg-footer
+    color: $gray
+    font-size: 50px
+    text-align: center
+    @include media-breakpoint-down(sm)
+      margin-bottom: 30px
+  #memorialMap
+    height: 260px

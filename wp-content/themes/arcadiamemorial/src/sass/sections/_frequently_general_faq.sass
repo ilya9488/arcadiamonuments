@@ -1,0 +1,89 @@
+.frequently-general-faq
+  margin-top: -58px
+  padding-bottom: 138px
+  @include media-breakpoint-down(lg)
+    margin-top: -68px
+  @include media-breakpoint-down(md)
+    margin-top: -28px
+    padding-bottom: 158px
+  @include media-breakpoint-down(sm)
+    margin-top: -38px
+  .title
+    margin-top: 60px
+    @include media-breakpoint-down(md)
+      margin-top: 30px
+      padding-bottom: 20px
+    @include media-breakpoint-down(sm)
+      font-size: 35px
+      margin-top: 50px
+      padding-bottom: 30px
+      padding-left: 10px
+
+
+  .accordion
+    max-width: 1140px
+    .card-header
+      padding: 0
+      margin: 0
+    .card-body
+      position: relative
+      padding: 20px 71px 0 20px
+      background-color: $dark-gray
+      h4
+        color: $active
+        margin-bottom: 0
+        padding-bottom: 15px
+      p
+        padding-bottom: 24px
+        margin: 0
+        a
+          color: $active
+        
+    .tab-pane
+      padding: 12px 15px 10px 20px
+      margin: 0
+      transition: all 0s
+      @include media-breakpoint-down(sm)
+        padding: 12px 15px 10px 10px
+    .btn
+      max-width: 1000px
+      text-align: left
+      font-size: 22px
+      @include media-breakpoint-down(sm)
+        font-size: 18px
+    .close-accordion
+      position: absolute
+      right: 20px
+      top: 20px
+      transition: all 3s
+  .tab-pane.collapsing
+    padding: 0
+    height: 0
+    font-size: 0
+    transition: all 0s
+    span.btn
+      height: 0
+      font-size: 0
+      transition: all 0s
+      
+    span
+      img
+        height: 0
+      transition: all 0s
+  .tab-pane.show
+    opacity: 0
+    padding: 0
+    height: 0
+    font-size: 0
+    transition: all 0s
+    span.btn
+      height: 0
+      font-size: 0
+      transition: all 0s
+    span
+      img
+        height: 0
+        transition: all 0s
+
+
+

@@ -1,0 +1,99 @@
+.biography-main-events,
+.memorial-portrait
+  .personal-memorial
+    padding-left: 15px
+    @include media-breakpoint-down(xl)
+      padding-left: 0
+    @include media-breakpoint-down(md)
+      padding-left: 30px
+    @include media-breakpoint-down(sm)
+      padding-left: 0
+    p
+      padding-bottom: 20px
+  .img-wrapper
+    padding-left: 50px
+    @include media-breakpoint-down(lg)
+      padding-left: 40px
+    @include media-breakpoint-down(md)
+      padding-left: 0
+    @include media-breakpoint-down(sm)
+      max-width: 380px
+
+    .icon-price
+      position: relative
+      border: 1px solid $lite-gray
+      padding: 20px
+      margin: 0 10px 10px 0
+      transition: .3s
+      cursor: pointer
+      &:hover
+        border: 1px solid $active
+        .price
+          opacity: 1
+      .gift
+        max-width: 60px
+        @include media-breakpoint-down(sm)
+          max-width: 40px
+      .price
+        opacity: 0
+        position: absolute
+        background: $active
+        color: $dark-gray
+        font-size: 14px
+        font-weight: 500
+        width: 100%
+        padding: 4px 0
+        border-radius: 50px
+        text-align: center
+        bottom: 0
+        left: 0
+        transform: translateY(50%)
+        z-index: 1
+        transition: .3s
+    .btn-create
+      margin: 15px auto 60px
+      @include media-breakpoint-down(lg)
+        margin: 15px auto 20px
+
+.memorial-portrait
+  .portrait
+    position: relative
+    .gift
+      max-width: 150px
+      position: absolute
+      bottom: -30px
+      right: -55px
+      @include media-breakpoint-down(md)
+        max-width: 90px
+        bottom: -20px
+        right: -40px
+  .img-wrapper
+    padding-top: 40px
+    padding-bottom: 20px
+    padding-left: 0
+    @include media-breakpoint-down(sm)
+      padding-top: 20px
+      margin-bottom: 30px
+    .icon-price
+      position: relative
+      border-color: transparent
+      margin-right: 50px
+      @include media-breakpoint-down(sm)
+        margin: 0 20px 
+        padding: 10px
+      .gift
+        @include media-breakpoint-down(sm)
+          max-width: 50px
+      .name-sender
+        position: absolute
+        bottom: -50px
+        left: 0
+        width: 100%
+        font-size: 14px
+        font-weight: 400
+        line-height: 22px
+        font-family: $text
+        color: $gray
+        text-align: center
+        @include media-breakpoint-down(sm)
+          font-size: 12px

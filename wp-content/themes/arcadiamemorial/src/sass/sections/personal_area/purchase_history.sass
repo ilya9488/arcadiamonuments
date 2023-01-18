@@ -1,0 +1,81 @@
+.purchase-history
+  .title
+    padding-top: 30px
+    @include media-breakpoint-down(lg)
+      padding-top: 0
+
+  .pagination-content
+    margin-bottom: 20px
+    .block
+      padding-top: 25px
+      width: 25%
+      max-width: 285px
+      min-width: 25%
+      margin-bottom: 10px
+      @include media-breakpoint-down(md)
+        min-width: 190px
+      @include media-breakpoint-down(sm)
+        min-width: 175px
+
+      .img-wrap
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        border: 1px solid $lite-gray
+        max-width: 255px
+        padding-top: 55px
+        @include media-breakpoint-down(lg)
+          padding-top: 35px
+        @include media-breakpoint-down(md)
+          padding-top: 25px
+          max-width: 140px
+          margin: 0 auto
+        @include media-breakpoint-down(sm)
+          padding-top: 25px
+          max-width: 140px
+        .img
+          width: 150px
+          height: 150px
+          margin-bottom: 35px
+          @include media-breakpoint-down(lg)
+            width: 120px
+            height: 120px
+            margin-bottom: 25px
+          @include media-breakpoint-down(md)
+            width: 80px
+            height: 80px
+            margin-bottom: 15px
+          img
+            width: 100%
+        .price
+          text-align: center
+          width: 100px
+          height: 30px
+          background: $active
+          border-radius: 100px
+          margin-bottom: -15px
+          padding-top: 5px
+          font-weight: 500
+          font-size: 14px
+          @include media-breakpoint-down(md)
+            width: 70px
+            height: 25px
+            padding-top: 5px
+            font-size: 12px
+      .text
+        text-align: center
+        padding-top: 25px
+        max-width: 255px
+        min-width: 155px
+        @include media-breakpoint-down(sm)
+          min-width: 140px
+        .name
+          @include media-breakpoint-down(sm)
+            padding-bottom: 0
+        .date
+          color: transparentize($gray, .4)
+          @include media-breakpoint-down(lg)
+            font-size: 13px
+          @include media-breakpoint-down(sm)
+            font-size: 11px

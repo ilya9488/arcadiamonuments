@@ -1,0 +1,86 @@
+{
+    "key": "group_614ced2ae9816",
+    "title": "Personal Area",
+    "fields": [
+        {
+            "key": "field_614cede0c9229",
+            "label": "Personal Area",
+            "name": "personal_area",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "614cee79067b2": {
+                    "key": "614cee79067b2",
+                    "name": "personal_data",
+                    "label": "Personal Data",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_614ceeafece06": {
+                    "key": "layout_614ceeafece06",
+                    "name": "favorites",
+                    "label": "Favorites",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_615474209990e": {
+                    "key": "layout_615474209990e",
+                    "name": "purchase_history",
+                    "label": "Purchase History",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6154a53815d0e": {
+                    "key": "layout_6154a53815d0e",
+                    "name": "message_history",
+                    "label": "Message History",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1632937310
+}

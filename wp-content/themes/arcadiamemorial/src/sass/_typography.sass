@@ -1,0 +1,509 @@
+@import "mixin"
+*
+  outline: none
+h1, .h1
+  font-style: normal
+  font-weight: normal
+  font-size: 70px
+  line-height: 86px
+  color: $dark-gray
+  font-family: $title
+  @include media-breakpoint-down(lg)
+    font-size: 60px
+    line-height: 70px
+  @include media-breakpoint-down(md)
+    font-size: 50px
+    line-height: 60px
+  @include media-breakpoint-down(sm)
+    font-size: 40px
+    line-height: 52px
+h2, .h2
+  font-style: normal
+  font-weight: normal
+  font-size: 50px
+  line-height: 64px
+  color: $dark-gray
+  font-family: $title
+  margin: 34px 0 0 0
+  padding-bottom: 30px
+  @include media-breakpoint-down(lg)
+    font-size: 45px
+    padding-bottom: 20px
+  @include media-breakpoint-down(md)
+    font-size: 40px
+    padding-bottom: 0
+  @include media-breakpoint-down(sm)
+    font-size: 30px
+    line-height: 44px
+    padding-bottom: 10px
+.privacy 
+  h2:first-child
+    margin-top: 0
+h3, .h3
+  font-style: normal
+  font-weight: normal
+  font-size: 30px
+  line-height: 36px
+  color: $dark-gray
+  font-family: $title
+  padding: 0
+  padding-bottom: 15px
+  margin: 0 0 20px 0
+  @include media-breakpoint-down(lg)
+    font-size: 30px
+  @include media-breakpoint-down(md)
+    font-size: 26px
+    padding-bottom: 10
+  @include media-breakpoint-down(sm)
+    font-size: 24px
+    padding-bottom: 15px
+    margin: 0
+h4, .h4
+  font-style: normal
+  font-weight: normal
+  font-size: 22px
+  line-height: 30px
+  color: $dark-gray
+  font-family: $title
+  @include media-breakpoint-down(sm)
+    font-size: 18px
+    padding-bottom: 10px
+h5, .h5
+  font-style: normal
+  font-weight: normal
+  font-size: 18px
+  line-height: 24px
+  color: $dark-gray
+  font-family: $title
+h6, .h6
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 22px
+  color: $gray
+  font-family: $text
+p
+  font-size: 16px
+  font-weight: 400
+  line-height: 26px
+  color: $gray
+  font-family: $text
+  padding: 0 0 26px 0
+  margin: 0
+  @include media-breakpoint-down(sm)
+    font-size: 14px
+    padding-bottom: 13px
+span
+  font-family: $text
+.card-body
+  p
+    color: $pale-gray
+a
+  text-decoration: none
+  font-family: $text
+  &:hover
+    text-decoration: none
+  &:active,
+  &:focus
+    text-decoration: underline
+    
+    
+a.link,
+.link
+  color: $gold
+  &:active,
+  &:focus
+    color: $klick-link
+  &:hover
+    color: $klick-link
+  
+
+ul
+  li
+    list-style: none
+.privacy
+  ul
+    margin-left: -23px
+    max-width: 530px
+    margin-top: -9px
+    padding-bottom: 16px
+    li
+      position: relative
+      font-size: 16px
+      color: $gray
+      font-family: $text
+      line-height: 27px
+      margin-bottom: 10px
+      &::before
+        content: ''
+        position: absolute
+        width: 8px
+        height: 8px
+        background: $active
+        top: 8px
+        left: -17px
+        border-radius: 50%
+ol
+  padding: 0 0 30px 20px
+  margin: -10px 0 0 0
+  li
+    padding: 0 0 3px 0
+    font-size: 16px
+.yellow-disc
+  ul
+    li
+      position: relative
+      &::before
+        content: ''
+        width: 6px
+        height: 6px
+        background: $active
+        position: absolute
+        left: -15px
+        top: 10px
+        border-radius: 50%
+
+
+.btn-light
+  font-style: normal
+  font-weight: 500
+  font-size: 16px
+  line-height: 24px
+  text-transform: uppercase
+  background-color: transparent
+  border-color: transparent
+  position: relative
+  span
+    position: relative
+    z-index: 3
+    color: $dark-gray
+  &:before
+    content: ''
+    position: absolute
+    z-index: 0
+    left: -19px
+    top: -11px
+    width: 60px
+    height: 60px
+    background-color: $active
+    border-radius: 40px
+    +transition(.3s ease)
+  &:hover
+    background-color: transparent
+    border-color: transparent
+    &:before
+      +transition(.3s ease)
+      width: calc(100% + 36px)
+  &:active
+    background-color: transparent
+    border-color: transparent
+    &:before
+      background-color: $klick-btn
+  &:focus,
+  &:visited
+    box-shadow: none // this is active border (gray) default
+    background-color: transparent
+    border-color: transparent // end this active border
+
+// clear default css
+.btn-light:not(:disabled):not(.disabled).active,
+.btn-light:not(:disabled):not(.disabled):active,
+.show>.btn-light.dropdown-toggle
+  background-color: transparent
+  border-color: transparent
+// login / signup / forgot pas
+.form-btn.btn-light
+  margin-left: 20px
+  &:before
+    z-index: -1
+  input[type="submit"]
+    border: none
+    background: transparent
+    font-family: $text
+    font-size: 16px
+    font-weight: 500
+    text-transform: uppercase
+p.errno,
+span.error
+  position: relative
+  padding-left: 10px
+  padding-bottom: 0
+  margin-bottom: 15px
+  border-left: 1px solid transparentize($invalid-text, .1)
+
+form
+  p,div
+    input:-webkit-autofill
+      -webkit-text-fill-color: $dark-gray
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active
+      -webkit-box-shadow: 0 0 0 30px $clear inset
+    input
+      &:-webkit-autofill::first-line
+        font-size: 16px
+        font-family: $text
+        font-weight: 400
+        color: $dark-gray
+
+.btn-create
+  color: $dark-gray
+  font-size: 16px
+  font-weight: 500
+  text-transform: uppercase
+  padding: 18px 30px
+  background: transparent
+  border-radius: 100px
+  border: 2px solid $dark-gray
+  transition: .3s
+  &:hover
+    background: $dark-gray
+    color: $clear
+    text-decoration: none
+
+// link arrow
+.link-arrow
+  font-size: 16px
+  font-weight: 500
+  text-transform: uppercase
+  text-decoration: none
+  margin: 0
+  color: $dark-gray
+  position: relative
+  &:hover
+    text-decoration: none
+    color: $dark-gray
+    &::after
+      right: -48px
+  &:active,
+  &:focus
+    color: $dark
+  &::after
+    content: ''
+    background-image: url('../img/about-us/icons/arrow-right.svg')
+    background-repeat: no-repeat
+    bottom: 3px
+    right: -40px
+    width: 30px
+    height: 10px
+    position: absolute
+    transition: .3s
+
+@import "icons"
+
+section
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  margin-bottom: 130px
+  @include media-breakpoint-down(lg)
+    margin-bottom: 100px
+  @include media-breakpoint-down(md)
+    margin-bottom: 30px
+  @include media-breakpoint-down(sm)
+    margin-bottom: 30px
+.personal-area
+  margin-top: -130px
+  @include media-breakpoint-down(lg)
+    margin-top: -100px
+  @include media-breakpoint-down(md)
+    margin-top: -30px
+  @include media-breakpoint-down(sm)
+    margin-top: -30px
+
+.modal.fade
+  background-color: $modal-bg
+
+// forms
+.wpcf7
+  p
+    text-align: left
+    .menu
+      select
+        display: none
+    .your-name,
+    .your-email,
+    .your-message,
+    .your-tel
+      input,
+      textarea
+        font-size: 16px
+        font-weight: 500
+        color: $dark-gray
+        background: transparent
+        border: none
+        border-bottom: 1px solid $dark-gray
+        box-shadow: 0 0 0 1000px $clear inset
+        padding: 0 0 20px 0
+        width: 100%
+        margin-bottom: 10px
+        @include media-breakpoint-down(sm)
+          font-size: 14px
+        &::placeholder
+          font-weight: 400
+          font-size: 16px
+          font-family: $text
+          color: $dark-gray
+          @include media-breakpoint-down(sm)
+            font-size: 14px
+
+    .ajax-loader
+        margin: 0
+        @include media-breakpoint-down(md)
+          margin: 0 auto
+
+  // The field is required.
+  .wpcf7-not-valid-tip
+    color: $invalid-text
+    font-size: 14px
+    text-align: left
+    font-family: $text
+    @include media-breakpoint-down(md)
+      font-size: 13px
+      
+  form.sent
+    // complete masage
+    .wpcf7-response-output
+      text-align: center
+      padding: 0
+      margin: 20px 0 0 0
+      border: none
+  form.invalid 
+    // your-name wrapper (span)
+    .your-name,
+    .your-email
+      .wpcf7-not-valid
+        border-bottom: 1px solid $invalid-bord
+        color: $invalid-text
+        &:focus
+          color: $dark-gray
+    // error... masage
+    .wpcf7-response-output
+      text-align: center
+      border: none
+      padding: 0
+      margin: 20px 0 0 0
+      color: $invalid-text
+  .btn.btn-light
+    margin-left: 20px
+    margin-top: 40px
+    border: none
+    @include media-breakpoint-down(sm)
+      margin: 20px
+
+// dropdown select
+.dropdown
+  display: block
+  width: 100%
+  border-bottom: 1px solid $dark-gray
+  position: relative
+  font-size: 16px
+  font-family: $text
+  color: $dark-gray
+  height: 100%
+  margin-bottom: 20px
+  text-align: left
+  outline: none
+  transition: all .3s ease
+  .select
+    .message
+      cursor: pointer
+      display: inline-block
+      padding: 0 0 20px 0
+      font-size: 16px
+      font-family: $text
+      color: $dark-gray
+      @include media-breakpoint-down(sm)
+        font-size: 14px
+    .check
+      font-weight: 500
+    .icon
+      padding: 0
+      transition: .3s
+      margin: 0 5px 15px 0
+  &-menu
+    position: absolute
+    left: 0
+    width: 100%
+    max-height: 200px
+    margin-top: 1px
+    overflow: hidden
+    overflow-y: auto
+    z-index: 9
+    font-size: 14px
+    display: none
+    padding: 0
+    list-style: none
+    @include media-breakpoint-down(md)
+      max-height: 190px
+    &::-webkit-scrollbar
+      width: 4px
+    &::-webkit-scrollbar-track
+      background: $header-nav
+    &::-webkit-scrollbar-thumb
+      background: $active
+      border-radius: 50px
+    &::-webkit-scrollbar-thumb:hover
+      background: lighten($active, 10)
+    li
+      font-size: 16px
+      padding: 20px 20px 0
+      transition: all .2s ease-in-out
+      cursor: pointer 
+      &:last-child
+        padding-bottom: 20px
+      @include media-breakpoint-down(sm)
+        font-size: 14px
+.dropdown.active
+  outline: none
+  .icon
+    transform: rotate(180deg)
+
+// PAGINATION ( favorites, purchase history... )
+.pagination-links
+  display: flex
+  justify-content: center
+  padding: 10px 70px 0 0
+  @include media-breakpoint-down(sm)
+    padding: 10px 0 0 0
+  ul
+    padding: 0
+    margin: 0
+    li
+      display: inline-block
+      text-align: center
+      border: 1px solid $pugin-bord
+      transition: .3s
+      margin-right: 6px
+      margin-left: 0
+      &:hover
+        border-color: $active
+        a
+          background: $active
+      a
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        min-width: 38px
+        height: 38px
+        padding: 0 10px
+        text-decoration: none
+        font-size: 16px
+        font-weight: 400
+        color: $dark-gray
+        transition: .3s
+        @include media-breakpoint-down(sm)
+          min-width: 32px
+          height: 32px
+          font-size: 15px
+    li.curent-item
+      border-color: $active
+      a
+        background: $active
+        pointer-events: none
+
+
+
+
+

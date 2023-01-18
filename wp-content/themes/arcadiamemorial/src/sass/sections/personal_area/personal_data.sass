@@ -1,0 +1,229 @@
+.personal-data
+  .menu-wrap
+    @include media-breakpoint-down(sm)
+      padding-right: 0
+  &-form
+    padding: 30px 0 0 0
+    @include media-breakpoint-down(md)
+      padding: 20px 0 0 0
+    // header form
+    .form-header
+      display: none
+      margin-bottom: 25px
+      padding-right: 80px
+      @include media-breakpoint-down(lg)
+        padding-right: 0
+      h2
+        @include media-breakpoint-down(md)
+          margin-top: 0
+      .edit
+        padding-top: 60px
+        opacity: 1
+        width: 75px
+        transition: .5s
+        &:hover
+          svg
+            fill: $gold
+          .edit-text
+            color: $gold
+        @include media-breakpoint-down(md)
+          padding-top: 25px
+        @include media-breakpoint-down(sm)
+          padding-top: 15px
+        svg
+          margin-right: 10px
+          cursor: pointer
+          fill: $klick-btn
+          width: 26px
+          height: 26px
+          transition: .3s
+        &-text
+          padding-top: 5px
+          font-size: 16px
+          font-weight: 500
+          color: $klick-btn
+          cursor: pointer
+          transition: .3s
+      .edit.active
+        overflow: hidden
+        width: 0
+        opacity: 0
+    // img wrap
+    .img-wrap
+      position: relative
+      width: 150px
+      height: 150px
+      margin-bottom: 25px
+      @include media-breakpoint-down(md)
+        width: 130px
+        height: 130px
+
+      .img
+        background: $clear-bg
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow: hidden
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          object-position: center bottom
+        img[src$=svg]
+          width: 50%
+      label[for="user_photo"]
+        position: absolute
+        top: 0
+        right: -20px
+        opacity: 0
+        overflow: hidden
+        width: 0
+        transition: .3s
+        &:hover
+          svg
+          .bg
+            fill: darken($klick-btn, 10%)
+          .pencil
+            transform: scale(1.05) translate(-1px, -1px)
+        @include media-breakpoint-down(sm)
+          right: -55px
+        svg
+          width: 0
+          height: 40px
+          cursor: pointer
+          .bg
+            fill: $klick-btn
+            transition: .3s
+          .pencil
+            transition: .3s
+            fill: $clear
+      label[for="user_photo"].active
+        opacity: 1
+        width: 40px
+        svg
+          width: 100%
+      #user_photo
+        display: none
+    .form-fields
+      padding-top: 20px
+      transition: .3s
+    .form-fields.active
+      padding-top: 0
+      label
+        color: $clear
+        min-width: 350px
+        @include media-breakpoint-down(sm)
+          margin-right: 0
+          min-width: 165px
+          max-width: 350px
+        .eye
+          opacity: 1
+    label
+      font-family: $text
+      font-size: 12px
+      font-weight: 500
+      color: $gray
+      width: 33%
+      max-width: 350px
+      margin-right: 25px
+      @include media-breakpoint-down(md)
+        width: 50%
+        max-width: 220px
+        margin-right: 15px
+      @include media-breakpoint-down(sm)
+        width: 100%
+        max-width: 40%
+        min-width: 165px
+        margin-right: 0
+
+      input
+        width: 100%
+        border: none
+        font-size: 16px
+        font-weight: 500
+        padding: 0 0 15px 0
+        margin-bottom: 20px
+        width: 100%
+        border-bottom: 1px solid transparent 
+        transition: .4s
+        @include media-breakpoint-down(md)
+          font-size: 14px
+        @include media-breakpoint-down(sm)
+          font-size: 12px
+
+    label[for="password"]
+      position: relative
+      .eye
+        position: absolute
+        right: 0
+        top: 20px
+        fill: $eye-pas
+        cursor: pointer
+        transition: .3s
+        opacity: 0
+        #dash
+          fill: transparentize($eye-pas, 0)
+          transition: .3s
+      .eye.view
+        #dash
+          fill: transparentize($eye-pas, 1)
+    label[for="date_of_birth"]
+      position: relative
+      input
+        cursor: pointer
+        background: $clear
+      svg
+        fill: $dark-gray
+        position: absolute
+        right: 0
+        top: 25px
+        transform: rotate(0)
+        transition: .3s
+        @include media-breakpoint-down(sm)
+          top: 15px
+          right: 10px
+
+      svg.rotate
+        transform: rotate(.5turn)
+    label.active
+      color: transparent
+      input
+        border-color: $dark-gray
+    // footer form
+    .footer-form
+      padding-top: 35px
+      transition: 1s
+      @include media-breakpoint-down(md)
+        padding-top: 0
+
+      input[type="submit"],
+      input[type="reset"]
+        background: transparent
+        border: 2px solid $dark-gray
+        border-radius: 100px
+        color: $dark-gray
+        font-family: $text
+        font-size: 16px
+        font-weight: 500
+        padding: 16px 60px
+        text-transform: uppercase
+        opacity: 1
+        transition: .3s
+        @include media-breakpoint-down(sm)
+          padding: 12px 40px
+      input[disabled]
+        opacity: .3
+      input[type="reset"]
+        color: $gold
+        border: none
+        padding: 16px 25px
+    .footer-form.disabled
+      overflow: hidden
+      height: 0
+      opacity: 0
+// datepicker
+.pickmeup.pmu-area
+  max-width: 350px

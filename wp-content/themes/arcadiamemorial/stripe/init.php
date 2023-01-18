@@ -1,0 +1,3 @@
+<?php
+$stripe_key = 'sk_test_51JkaaABB1B26y4t9S2eUz3PQNGAafTusyjQLz8T5jjTO7RXNCmp4SLeG6cSt1x4ByfJ6thdzjZQdcLcVbAprMifs00HwgtWre3';
+$stripe_endpoint_secret = 'whsec_ch3AVJUUh8we9mwH56fqIM33j4GcGfwb';

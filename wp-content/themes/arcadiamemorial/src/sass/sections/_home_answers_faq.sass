@@ -1,0 +1,121 @@
+.home-answers-faq
+  padding-top: 5px
+  @include media-breakpoint-down(md)
+    padding-bottom: 150px
+  @include media-breakpoint-down(sm)
+    padding-bottom: 150px
+
+  .faq-wrapper
+    @include media-breakpoint-down(xl)
+      max-width: 550px
+    @include media-breakpoint-down(md)
+      max-width: none
+    h2
+      margin-top: 0
+      margin-bottom: 0
+      @include media-breakpoint-down(md)
+        text-align: center
+      @include media-breakpoint-down(sm)
+        margin-bottom: 20px
+  .faq-img-wrapper
+    margin-top: -8px
+    margin-left: -55px
+    margin-bottom: 140px
+    @include media-breakpoint-down(lg)
+      margin-left: 0
+    @include media-breakpoint-down(md)
+      max-width: 500px
+      margin: 0 auto
+    @include media-breakpoint-down(sm)
+      max-width: 400px
+      max-height: 450px
+      margin: 30px auto
+    img
+      object-fit: contain
+      object-position: top
+      width: 100%
+      @include media-breakpoint-down(xl)
+        object-position: bottom
+      @include media-breakpoint-down(lg)
+        object-position: center
+        max-height: 500px
+      @include media-breakpoint-down(sm)
+        object-position: top
+        max-height: 385px
+.accordion
+  max-width: 540px
+  @include media-breakpoint-down(md)
+    margin: 20px auto
+  .card
+    border-radius: 0
+  .card-header
+    padding: 0
+    margin: 0
+  .card-body
+    position: relative
+    padding: 20px 75px 5px 20px
+    background-color: $dark-gray
+    
+    h4
+      color: $active
+      margin-bottom: 15px
+    p
+      padding-bottom: 16px
+      margin: 0
+  
+  .tab-pane
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: auto
+    padding: 10px 15px 10px 20px
+    background: $clear
+    font-family: $title
+    font-size: 22px
+    transition: all 1s
+    @include media-breakpoint-down(sm)
+      padding: 12px 15px 10px 10px
+    span
+      @include media-breakpoint-down(md)
+        font-size: 20px
+    .open-accordion
+      height: 100%
+      line-height: 10px
+      margin-right: 5px
+      cursor: pointer
+  .btn
+    max-width: 400px
+    text-align: left
+    font-size: 22px
+    transition: all 0s
+  .close-accordion
+    position: absolute
+    right: 20px
+    top: 20px
+    cursor: pointer
+  .collapsing
+    transition: all .4s
+  .tab-pane.collapsing
+    transition: all 0s
+    span.btn
+      display: none
+      height: 0
+      font-size: 0
+      transition: all 0s
+    span
+      img
+        height: 0
+      transition: all 0s
+  .tab-pane.show
+    padding: 0
+    height: 0
+    font-size: 0
+    transition: all 0s
+    span.btn
+      height: 0
+      font-size: 0
+      transition: all 0s
+    span
+      img
+        height: 0
+

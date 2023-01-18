@@ -1,0 +1,158 @@
+.home-options
+  padding-top: 20px
+  @include media-breakpoint-down(lg)
+    padding-top: 0
+  .col
+    max-width: 550px
+    min-width: 240px
+    margin-right: 85px
+    @include media-breakpoint-down(lg)
+      margin: 0 auto
+      max-width: 500px
+    @include media-breakpoint-down(md)
+  h2
+    margin-top: -10px
+    @include media-breakpoint-down(lg)
+      font-size: 30px
+      margin-bottom: 10px
+    @include media-breakpoint-down(md)
+      padding-bottom: 0
+  p
+    padding-bottom: 15px
+  ul
+    margin-left: -23px
+    li
+      position: relative
+      font-size: 16px
+      color: $gray
+      font-family: $text
+      line-height: 26px
+      margin-bottom: 13px
+      &::before
+        content: ''
+        position: absolute
+        width: 8px
+        height: 8px
+        background: $active
+        top: 8px
+        left: -17px
+        border-radius: 50%
+  .bottom-text
+    margin-top: -5px
+  .btn
+    margin-top: 35px
+    margin-left: 15px
+  .video-option
+    display: flex
+    justify-content: center
+    max-width: 500px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    padding: 225px 180px
+    margin-left: 75px
+    @include media-breakpoint-down(lg)
+      margin-top: 70px
+    @include media-breakpoint-down(md)
+      width: 100%
+      margin-top: 70px
+      margin: 40px 0 0 0
+    @include media-breakpoint-down(sm)
+      padding: 120px 150px
+  .btn-video-option
+    border: none
+    background: transparent
+    .btn-pulse
+      width: 150px
+      height: 150px
+      @include media-breakpoint-down(md)
+        .circle-1
+          animation: circle-1 2s infinite
+        .circle-2
+          stroke-width: 2px
+          animation: circle-2 3s infinite
+          animation-delay: 1s
+        .circle-3
+          stroke-width: 3px
+          animation: circle-3 2s infinite
+
+      &:hover
+        .circle-1
+          animation: circle-1 2s infinite
+        .circle-2
+          stroke-width: 2px
+          animation: circle-2 3s infinite
+          animation-delay: 1s
+        .circle-3
+          stroke-width: 3px
+          animation: circle-3 2s infinite
+
+      .circle-1,
+      .circle-2,
+        stroke: $active
+        stroke-width: 0
+      .circle-3
+        stroke: $active
+        fill: $active
+        stroke-width: 0
+      .path-play
+        fill: $clear
+      .circle-1,
+      .circle-2,
+      .circle-3,
+      .path-play
+        transition: 1s
+  #modal-optons-video
+    .modal-dialog
+      max-width: none
+      .modal-content
+        max-width: 1140px
+        background-color: transparent
+        .modal-header
+          padding: 0
+          background-color: transparent
+          border: none
+          .close
+            @include media-breakpoint-down(lg)
+              right: 15px
+        .modal-body
+          padding: 0
+          margin: 0
+          background-color: transparent
+          video,
+          iframe
+            width: 100%
+            min-height: 600px
+            @include media-breakpoint-down(md)
+              min-height: 300px
+            @include media-breakpoint-down(sm)
+              min-height: 200px
+
+@keyframes circle-1
+  0%
+    stroke-width: 0px
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    stroke-width: 2px
+    opacity: 0
+
+@keyframes circle-2
+  0%
+    stroke-width: 0px
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    stroke-width: 5px
+    opacity: 0
+
+@keyframes circle-3
+  0%
+    stroke-width: 0px
+  50%
+    stroke-width: 3px
+  100%
+    stroke-width: 0px
+

@@ -1,0 +1,132 @@
+.events
+  @include media-breakpoint-down(md)
+    padding-left: 10px
+  @include media-breakpoint-down(sm)
+    padding-left: 15px
+  h2
+    margin-top: 0
+    @include media-breakpoint-down(md)
+      line-height: 30px
+      padding-bottom: 30px
+    @include media-breakpoint-down(sm)
+      padding-bottom: 20px
+  .text-wrap
+    margin-bottom: 80px
+    @include media-breakpoint-down(md)
+      margin-bottom: 50px
+    @include media-breakpoint-down(md)
+      margin-bottom: 20px
+  .yellow-disc
+    padding-left: 45px
+    font-family: $title
+    font-size: 22px
+    font-weight: 400
+    color: $dark-gray
+    @include media-breakpoint-down(sm)
+      padding-left: 15px
+      font-size: 18px
+    ul
+      padding-left: 15px
+      li
+        line-height: 30px
+        padding-bottom: 16px
+        @include media-breakpoint-down(sm)
+          padding-bottom: 12px
+  .dropdown
+    .message
+      padding-bottom: 0
+    .icon-bracket-accordion
+      margin-bottom: 0
+
+.events-calendar
+// whole calendar
+.calendarBig-wrap
+  @include media-breakpoint-down(lg)
+    overflow-x: scroll
+#calendarBig
+  font-family: $text
+  font-size: 14px
+  text-align: center
+  color: $dark-gray
+  margin: 60px auto 0
+  background: $clear-bg
+  @include media-breakpoint-down(md)
+    margin: 40px auto 0
+  @include media-breakpoint-down(sm)
+    margin: 20px auto 0
+  // space between months
+  .month-line > td
+    border-right: 2px solid $clear
+    border-bottom: 2px solid $clear
+  table[data-m]
+    min-width: 345px
+    margin: 0 10px 12px
+    @include media-breakpoint-down(lg)
+      margin: 0 5px 5px
+      min-width: 300px
+  table
+    tbody
+      tr
+        height: 32px
+      td
+        vertical-align: middle
+      td:nth-child(n+6)
+        color: $tab-text
+      td[title]
+        cursor: pointer
+        // color: $clear
+        position: relative
+        z-index: 1
+        &::before
+          content: ''
+          width: 32px
+          height: 32px
+          background: $active
+          position: absolute
+          left: 50%
+          top: 50%
+          border-radius: 50%
+          transform: translate(-50%, -50%)
+          z-index: -1
+        span
+          font-size: 0
+          display: inline-block
+          height: 100%
+          position: absolute
+          width: 100%
+          top: 0
+          left: 0
+      // .today
+    // name month
+    thead tr:nth-child(1)>td
+      font-family: 'Playfair Display', serif
+      font-size: 18px
+      font-weight: 400
+      color: $dark-gray
+      padding: 20px
+    // name day
+    thead tr:last-child
+      font-size: 14px
+      font-weight: 400
+      background: $bg-name-day
+      /* Mo / Tu / We ... */
+      td
+        padding: 6px
+        @include media-breakpoint-down(sm)
+          padding: 5px
+    // weekends and holidays
+    // .holiday,
+    thead td:nth-child(n+6)
+      color: $tab-text
+    // highlighted dates
+  // press months to the top
+  td
+    vertical-align: top
+  // month tables are aligned at the top, horizontally centered
+  table
+    display: inline-table
+    margin-bottom: 15px
+  /* name of the days of the week 
+  .month-wrap
+    @include media-breakpoint-down(md)
+      display: flex

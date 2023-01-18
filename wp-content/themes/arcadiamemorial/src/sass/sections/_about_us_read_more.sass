@@ -1,0 +1,45 @@
+.about-us-read-more
+  padding-bottom: 135px
+  h2
+    margin-top: 0
+    margin-bottom: 30px
+    text-align: center
+    @include media-breakpoint-down(sm)
+      margin: 0 auto 15px
+      max-width: 200px
+  .border-buttom
+    border-bottom: 1px solid $lite-gray
+    @include media-breakpoint-down(md)
+      border: none
+  .border-left-buttom-right
+    border: 1px solid $lite-gray
+    border-top: none
+    @include media-breakpoint-down(md)
+      border: none
+  .border-left-right
+    border: 1px solid $lite-gray
+    border-top: none
+    border-bottom: none
+    @include media-breakpoint-down(md)
+      border: none
+
+  .read-more-wrapper
+    padding: 50px
+    max-width: 340px
+    margin: 0 auto
+    @include media-breakpoint-down(md)
+      max-width: 300px
+      padding: 35px
+    @include media-breakpoint-down(sm)
+      max-width: 280px
+      text-align: center
+      padding: 20px 0 40px 0 
+
+    img
+      margin-bottom: 30px
+      object-fit: contain
+      @include media-breakpoint-down(lg)
+        width: 100%
+      @include media-breakpoint-down(sm)
+        width: 70%
+    

@@ -1,0 +1,164 @@
+.login-form
+  h2
+    margin-top: 0
+    line-height: 66px
+  #loginform
+    @include media-breakpoint-down(sm)
+      max-width: 400px
+      margin: 0 auto
+    .login-username
+      padding: 0
+      label
+        display: none
+      input#user_login
+        width: 100%
+        border: none
+        border-bottom: 1px solid $dark-gray
+        padding-bottom: 15px
+        margin-bottom: 40px
+        color: $dark-gray
+        &::placeholder
+          font-family: $text
+          font-size: 16px
+          font-weight: 400
+          color: transparentize($dark-gray, .3)
+    .login-password
+      position: relative
+      margin-bottom: 15px
+      label
+        display: none
+      input#user_pass
+        width: 100%
+        border: none
+        border-bottom: 1px solid $dark-gray
+        padding-bottom: 15px
+        color: $dark-gray
+        &::placeholder
+          font-family: $text
+          font-size: 16px
+          font-weight: 400
+          color: transparentize($dark-gray, .3)
+      svg.eye
+        fill: $eye-pas
+        position: absolute
+        right: 0
+        top: 2px
+        #dash
+          fill: transparentize($eye-pas, 0)
+          transition: .3s
+      svg.view
+        #dash
+          fill: transparentize($eye-pas, .8)
+
+    .login-remember
+      font-family: $text
+      font-size: 14px
+      font-weight: 400
+      display: flex
+      justify-content: space-between
+      .label-rememberme
+        cursor: pointer
+      .custom-checkbox
+        display: inline-block
+        cursor: pointer
+        width: 21px
+        height: 21px
+        border: 1px solid $dark-gray
+        border-radius: 3px
+        margin-right: 5px
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        padding-top: 2px
+        &::before
+          content: '\2714'
+          display: inline-block
+          color: $dark-gray
+          font-size: 16px
+          transform: scale(0)
+          transition: .5s
+      .custom-checkbox.check
+        &::before
+          transform: scale(1)
+      .forgot-password
+        color: $dark-gray
+        transition: .3s
+        margin-bottom: 20px
+        &:active,
+        &:focus
+          color: $klick-link
+        &:hover
+          color: $klick-link
+    .login-submit
+      margin-left: 15px
+      margin-bottom: 30px
+      background: transparent
+      border: none
+      #wp-submit
+        text-transform: uppercase
+        color: $dark-gray
+        font-family: $text
+        font-size: 16px
+        font-weight: 500
+        border: none
+        background: transparent
+      &::before
+        z-index: -1
+  .log-in-with
+    position: relative
+    font-family: $title
+    font-size: 22px
+    font-weight: 400
+    text-align: center
+    padding-top: 40px
+    padding-bottom: 40px
+    @include media-breakpoint-down(sm)
+      max-width: 400px
+      margin: 0 auto
+    &::before
+      content: ''
+      width: 30%
+      height: 1px
+      background: $dark-gray
+      position: absolute
+      right: 0
+      top: calc( 50% - 1px )
+      @include media-breakpoint-down(sm)
+        width: 20%
+    &::after
+      content: ''
+      width: 30%
+      height: 1px
+      background: $dark-gray
+      position: absolute
+      left: 0
+      top: calc( 50% - 1px )
+      @include media-breakpoint-down(sm)
+        width: 20%
+  .with-links
+    padding-top: 15px
+    @include media-breakpoint-down(sm)
+      max-width: 400px
+      margin: 0 auto
+    a
+      margin: 0 20px
+    img
+      width: 40px
+      height: 40px
+  #rememberme
+    display: none
+  .login-username,
+  .login-password
+    input:-webkit-autofill
+      -webkit-text-fill-color: $dark-gray
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active
+      -webkit-box-shadow: 0 0 0 30px $clear inset
+    input
+      &:-webkit-autofill::first-line
+        font-size: 16px
+        font-family: $text
+        font-weight: 400
+        color: $dark-gray

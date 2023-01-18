@@ -1,0 +1,78 @@
+.contact-us-form
+  padding-bottom: 0
+  margin-top: 18px
+  .contact-img
+    padding-top: 30px
+    padding-right: 50px
+    @include media-breakpoint-down(lg)
+      padding-top: 0
+      padding-right: 0
+
+    img
+      width: 100%
+      object-fit: contain
+      @include media-breakpoint-down(md)
+        max-height: 500px
+      @include media-breakpoint-down(sm)
+        max-height: 300px
+  .contact-form
+    max-width: 540px
+    @include media-breakpoint-down(md)
+      margin: 0 auto
+    h2
+      margin: 0 0 30px 0
+      padding: 0
+  .wpcf7
+    @include media-breakpoint-down(md)
+      padding-bottom: 20px
+    p
+      padding-bottom: 20px
+      @include media-breakpoint-down(sm)
+        padding-bottom: 10px
+      .menu
+        .message-subject
+          width: 100%
+          padding-bottom: 20px
+          margin-bottom: 20px
+          @include media-breakpoint-down(sm)
+            padding-bottom: 10px
+            margin-bottom: 10px
+      .your-name,
+      .your-email,
+      .your-message
+        display: block
+        input,
+        textarea
+          width: 100%
+          padding: 0 0 20px 0
+          margin-bottom: 20px
+          @include media-breakpoint-down(sm)
+            padding: 0 0 10px 0
+            margin-bottom: 10px
+        textarea
+          height: 100px
+          min-height: 100px
+          font-weight: 500
+          margin-bottom: 10px
+
+    // The field is required.
+    .wpcf7-not-valid-tip
+      padding-bottom: 20px
+    form.sent
+    // complete masage
+    .wpcf7-response-output
+      margin: 20px 0
+    form.invalid 
+      // error... masage
+      .wpcf7-response-output
+        margin: 20px 0
+      .your-name,
+      .your-email,
+      .your-message
+        display: block
+        input,
+        textarea
+          width: 100%
+          padding: 0 0 20px 0
+          margin-bottom: 0
+
